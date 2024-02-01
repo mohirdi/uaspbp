@@ -1,0 +1,100 @@
+# Create User
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "mahpud",
+  "password" : "admin",
+  "name" : "udin"
+}
+
+###
+
+# Login User
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "awal",
+  "password" : "admin"
+}
+
+###
+
+# Get Current User
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 505f3260-0764-4a4a-9c9b-9f1b9a830433
+
+###
+
+# Update Current User
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 57828050-c0aa-4d5e-86f5-8eef60e8ff68
+{
+  "name" : "awaludin"
+}
+
+###
+
+# Logout User
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: cadd2c9e-75f8-4aa7-b88b-1fb4b6b17c55
+
+###
+
+# Create pasien
+POST http://localhost:3000/api/pasiens
+Content-Type: application/json
+Accept: application/json
+Authorization: 505f3260-0764-4a4a-9c9b-9f1b9a830433
+{
+  "id" : "10",
+  "namaPenyakit" : "magg",
+  "keterangan" : "penyakit bawaan",
+  "ruangan" : 14,
+  "antrian" : 6,
+  "kelamin" : "pria",
+  "alamat" : "kp. babakan"
+}
+
+
+###
+
+# Get pasien by ID
+GET http://localhost:3000/api/pasiens/11
+Content-Type: application/json
+Accept: application/json
+Authorization: 19c25c96-0110-4a44-bace-4c6d01dd53b6
+
+###
+
+# Update pasien by ID
+PUT http://localhost:3000/api/pasiens/11
+Content-Type: application/json
+Accept: application/json
+Authorization: 19c25c96-0110-4a44-bace-4c6d01dd53b6
+
+{
+  "namaPenyakit": "migrain",
+  "keterangan": "sakit kepala",
+  "ruangan": 1,
+  "antrian": 1,
+  "kelamin": "laki laki",
+  "alamat": "jl. cibaraja"
+}
+
+###
+
+# Delete pasien by ID
+DELETE http://localhost:3000/api/pasiens/14
+Content-Type: application/json
+Accept: application/json
+Authorization: 19c25c96-0110-4a44-bace-4c6d01dd53b6
